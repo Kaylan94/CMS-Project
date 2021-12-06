@@ -26,7 +26,7 @@
     "test": "mocha",
     "server": "nodemon server.js",
     "client": "cd palmsoft-cms && npm start",
-    "client-install": "cd Server/project-logger && npm install",
+    "client-install": "cd palmsoft-cms && npm install",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "npm run server",
     "build": "cd palmsoft-cms && npm run build",
