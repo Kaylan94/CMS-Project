@@ -10,9 +10,8 @@ const PORT = process.env.PORT || 8080;
 const DB_Uri = process.env.DB_URI;
 const bcrypt = require('bcrypt');
 require('dotenv').config();
-const helmet = require("helmet");
 
-app.use(helmet());
+
 app.use(bodyParserJ);
 app.use(bodyParserU);
 app.use(cookieParser());
