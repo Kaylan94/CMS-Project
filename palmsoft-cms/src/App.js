@@ -48,7 +48,7 @@ export default class App extends Component {
     
     render() {
 
-        const { isLoggedIn, token, user } = this.state;
+        const { isLoggedIn, token, userCred } = this.state;
 
         return(
             <Router>
@@ -107,7 +107,7 @@ export default class App extends Component {
                                     <ContentTable {...props} 
                                         loggedInStatus={isLoggedIn} 
                                         token={token} 
-                                        user={user}
+                                        user={userCred}
                                     /> 
                                 </>
                             )}
