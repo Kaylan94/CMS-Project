@@ -1,0 +1,193 @@
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: visible;
+}
+.loading {
+  padding: 50px;
+  text-align: center;
+}
+
+.build-btn {
+  cursor: pointer;
+  background-color: white;
+  border-color: white;
+  width: 150px;
+  transition-duration: 0.4s;
+  padding: 4px;
+}
+
+.build-btn:hover {background-color: #058aa1; border-color: #058aa1; color: rgb(245, 245, 245);}
+
+.build-btn:active {
+  background-color: #058aa1;
+  border-color: #058aa1;
+  transform: translateY(4px);
+  color: whitesmoke;
+}
+
+.nav-btn {
+  font-size: inherit;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px rgb(223, 215, 223);
+  transition-duration: 0.4s;
+  padding: 5px;
+}
+
+.nav-btn:hover {background-color: #4d0328; color: rgb(245, 245, 245);}
+
+.nav-btn:active {
+  background-color: #4d0328;
+  box-shadow: 0 5px rgb(221, 180, 221);
+  transform: translateY(4px);
+  color: whitesmoke;
+}
+
+a:hover{
+  color: rgb(245, 13, 52);
+}
+
+a:active{
+  color: rgb(245, 13, 52);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+
+.todo-button {
+  height: 27px;
+  width: 80px;
+  text-align: center;
+  font-size: medium;
+  font-weight: 500;
+  background-color: #283334;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+}
+
+.todo-input {
+  height: 15px;
+  width: 150px;
+  font-size: medium;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.App-logo {
+  height: 15vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin: 10%;
+  margin-top: 5%;
+  margin-bottom: 20%;
+  border-radius: 5px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.setForm {
+
+  box-shadow: 0 0px 6.2px rgba(32, 103, 124.086),
+ 
+}
+
+.contentTable {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.9em;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.contentTable thead tr {
+  background-color: #4d0328;
+  color: #ffffff;
+  text-align: left;
+}
+
+.contentTable th,
+.contentTable td {
+    padding: 12px 25px;
+}
+
+.contentTable tbody tr {
+  border-bottom: 1px solid #4d0328;
+}
+
+.contentTable tbody tr:nth-of-type(even) {
+  background-color: #e7dde2;
+}
+
+
+.contentTable tbody tr:last-of-type {
+    border-bottom: 2px solid #4d0328;
+}
+
+.contentTable tbody tr.active-row {
+  font-weight: bold;
+  color: #066388;
+}
+
+.formGroup {
+  padding: 10px;
+  font-weight: 600px;
+  font-size: medium;
+  color: whitesmoke;
+}
+
+.formControl {
+  width: 400px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: medium;
+  color: black;
+}
