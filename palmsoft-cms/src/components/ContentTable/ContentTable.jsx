@@ -120,29 +120,19 @@ class ContentTable extends Component {
                                     View
                                 </button>
                             </td>
-                            {currUser === "Admin"
-                            ?
-                                <td>
-                                    <button 
-                                        className="todo-button"
-                                        value={item._id}
-                                        style={{borderColor: '#4d1f1f', backgroundColor: '#4d1f1f', marginRight: 50}} 
-                                        onClick={this.handleDelete}>Delete</button>
-                                    <button 
-                                        className="todo-button"
-                                        style={{borderColor: '#c2dac7', backgroundColor: '#c2dac7'}} 
-                                        >
-                                            <a target='_blank' href='https://builder.io/content'> Edit </a>
-                                    </button>
-                                </td>
-                            :   <td> 
-                                    <button 
-                                        className="todo-button"
-                                        style={{borderColor: '#c2dac7', backgroundColor: '#c2dac7', color: '#4d0328'}}
-                                        > Like 
-                                    </button>
-                                </td>
-                            }
+                            <td>
+                                <button 
+                                    className="todo-button"
+                                    value={item._id}
+                                    style={{borderColor: '#4d1f1f', backgroundColor: '#4d1f1f', marginRight: 50}} 
+                                    onClick={this.handleDelete}>Delete</button>
+                                <button 
+                                    className="todo-button"
+                                    style={{borderColor: '#c2dac7', backgroundColor: '#c2dac7'}} 
+                                    >
+                                        <a target='_blank' href='https://builder.io/content'> Edit </a>
+                                </button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
