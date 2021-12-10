@@ -7,10 +7,9 @@ const bodyParserJ = require('body-parser').json();
 const bodyParserU = require('body-parser').urlencoded({ extended: false });
 const cookieParser = require('cookie-parser');
 const PORT = process.env.PORT || 8080;
+require('dotenv').config();
 const DB_Uri = process.env.DB_URI;
 const bcrypt = require('bcrypt');
-require('dotenv').config();
-
 
 app.use(bodyParserJ);
 app.use(bodyParserU);
@@ -24,7 +23,7 @@ app.use(function(req, res, next) {
   });
 
 //static
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //production
 if (process.env.NODE_ENV === 'production'){
@@ -338,8 +337,8 @@ app.use(function(req, res, next) {
 
   mongoose.Promise = global.Promise;
   
-  mongoose.connect('mongodb+srv://Kaylan94:4xnGJJn2rhw3P7R@hyperion-king-94.tlzbn.mongodb.net/KingDB94?retryWrites=true&w=majority', {
-    useNewUrlParser: true, 
+  mongoose.connect(DB_Uri, {
+    useNewUrlParser: true
     });
   
   mongoose.connection.on('error', function() {
