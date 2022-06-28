@@ -25,12 +25,10 @@ class ContentTable extends Component {
         
         let authorization = `Bearer ${this.props.token}`
 
-        if(authorization.length > 0) {
-
             fetch('/api/library', {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': authorization
+                    'Authorization': "Bearer " + {this.props.token}
                 }
             })
             .then(res => res.json())
@@ -40,7 +38,6 @@ class ContentTable extends Component {
                 })
                 console.log(result);
             });
-        }
     }
 
     handleDelete = (e) => {
