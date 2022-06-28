@@ -28,7 +28,7 @@ class ContentTable extends Component {
             fetch('/api/library', {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': "Bearer " + {this.props.token}
+                    'Authorization': authorization
                 }
             })
             .then(res => res.json())
