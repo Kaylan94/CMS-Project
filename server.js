@@ -178,7 +178,8 @@ app.get('/api/library' , (req, res) => {
     try {
         const decoded = jwt.verify(token, 'jwt-secret' );
 
-        Content.find({},function(err, docs) {
+        Content.find({}).toArray(function(err, docs) {
+            console.log(docs)
             if(err){
                 console.log("No user records found for this user.");
                 res.send("ERROR: No records found. ");
