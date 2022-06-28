@@ -79,10 +79,12 @@ class ContentTable extends Component {
 
         return (
             <div className="table-container" style={{padding: 40, paddingTop: 0}}>
-                <button 
+                
+            <br></br>
+            <button 
                     className="todo-button"
                     id="fetch_button"
-                    style={{borderColor: '#c2dac7', backgroundColor: '##c2dac7', margin: '0 auto'}} 
+                    style={{borderColor: 'grey', backgroundColor: 'gray', marginRight: 0, marginLeft: 0}} 
                     onClick={this.getContent}>List Content</button>
             <br></br>
             <table className="contentTable">
