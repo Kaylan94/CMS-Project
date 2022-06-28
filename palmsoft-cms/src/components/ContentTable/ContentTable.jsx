@@ -21,7 +21,7 @@ class ContentTable extends Component {
     }
 
     //fetch data immediately after the component has mounted
-    componentDidMount() {
+    getContent() {
         
         let authorization = `Bearer ${this.props.token}`
 
@@ -79,6 +79,11 @@ class ContentTable extends Component {
 
         return (
             <div className="table-container" style={{padding: 40, paddingTop: 0}}>
+                <button 
+                    className="todo-button"
+                    id="fetch_button"
+                    style={{borderColor: '#c2dac7', backgroundColor: '##c2dac7'}} 
+                    onClick={this.getContent}>List Content</button>
             <br></br>
             <table className="contentTable">
                 <thead>
