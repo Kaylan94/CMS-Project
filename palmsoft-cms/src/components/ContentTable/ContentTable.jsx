@@ -9,7 +9,8 @@ class ContentTable extends Component {
     
         this.state = {
             libData: [],
-            updateTable: true
+            updateTable: true,
+            token: this.props.token
         }
     }
 
@@ -23,12 +24,12 @@ class ContentTable extends Component {
     //fetch data immediately after the component has mounted
     getContent() {
         
-        let authorization = `Bearer ${this.props.token}`
+        
 
             fetch('/api/library', {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': authorization
+                    'Authorization': `Bearer ${this.state.token}`
                 }
             })
             .then(res => res.json())
@@ -84,7 +85,7 @@ class ContentTable extends Component {
             <button 
                     className="todo-button"
                     id="fetch_button"
-                    style={{borderColor: 'grey', backgroundColor: 'gray', marginRight: 0, marginLeft: 0}} 
+                    style={{borderColor: 'grey', backgroundColor: 'gray', margin:'0 auto', width: 300}} 
                     onClick={this.getContent}>List Content</button>
             <br></br>
             <table className="contentTable">

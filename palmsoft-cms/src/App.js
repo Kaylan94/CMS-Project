@@ -35,6 +35,7 @@ export default class App extends Component {
             isLoggedIn: true,
             token: token
         });
+        console.log(token)
     }
 
     //method to manage user session information
